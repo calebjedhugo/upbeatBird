@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: georgia;
+}
+
+.centered {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+#gameWindowCut {
+    clip: rect(auto, auto, auto, auto);
+}
+
+#gameWindow {
+    border: 3px darkred ridge;
+    background-color: lightblue;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image .5s;
+}
+
+#gameWindowMain {
+    background-color: #990000;
+}
+
+#loadScreen {
+    background-color: black;
+}
+
+#cyberBird {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100px;
+    clip: rect(auto, auto, auto, auto);
+}
+
+#imgBird{
+    position: absolute;
+    height: 200%;
+    width: 1400%;
+    top: -40%;
+    left: -65%;
+    background-image: url("./bird.png");
+    background-position: 0px 0px;
+    background-size: 100%;
+}
+
+.ingamePost {
+    background-color: brown;
+    position: absolute;
+}
+
+#bpmLabel, #scoreLabel, #jumpMeter, #mainMenu, #stats{
+    position: absolute;
+    z-index: 1;
+}
+
+#bpmLabel {
+    right: 0;
+    width: 60%; /*The normal trick wasnt working. I don't know why.*/
+    margin-top: 4%;
+}
+
+#inGameElements, #mainMenu, #stats {
+    transition: opacity 1s;
+}
+
+#scoreLabel {
+    right: calc(0px + 1.5%);
+}
+
+#stats, #mainMenu {
+  top: 15%;
+  width: 85%;
+}
+
+#score, #bpm, #highScore {
+    display: inline;
+}
+#highScoreLabel {
+    white-space: nowrap;
+}
+
+#jumpMeter {
+    border: 1px solid black;
+    background-color: red;
+    white-space: nowrap;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    clip: rect(auto, auto, auto, auto);
+    /*bottom: 0; needs to be controled by jsx base on if we have a mobile device*/
+    left: calc(0px + 1%);
+    width: 5%;
+}
+
+#jumpMeterText {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: relative;
+    top: 5px;
+}
+
+.gameFallingText {
+    position: absolute;
+    color: gold;
+    white-space: nowrap;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.gameMenuTitle {
+    text-align: center;
+    transition: color .75s;
+    padding-bottom: 10%;
+}
+
+#optionsMenu, #statsTable {
+    background-color: seashell;
+    border: inset darkgrey;
+    position: relative;
+    opacity: .9;
+}
+
+#optionsMenu {
+  width: 60%;
+}
+
+#beginNewGameButton, #tryAgain, #menuButton {
+  margin: 3% 0;
+}
+
+.switchScreenButton {
+    background-color: #e6e600;
+    border-radius: 25px;
+    border: ridge darkgreen;
+}
+
+.menuElement {
+    cursor: pointer;
+    text-align: center;
+    opacity: .8;
+    transition: all .2s;
+    padding: 1%;
+}
+
+.menuElement:hover{
+    opacity: 1;
+}
+
+.tableCentered {
+    text-align: center;
+}
+
+.tableLabel {
+    text-align: left;
+}
+
+#statDifficulty {
+    background-color: lightGreen;
+    border: ridge darkgrey;
+    cursor: pointer;
+    opacity: .8;
+}
+
+#statDifficulty:hover {
+    opacity: 1;
+}
+
+#modemenu {
+    text-align: center;
+    background-color: seashell;
+    border: inset darkgrey;
+    position: relative;
+    opacity: .9;
+    margin-top: 2%;
+}
+
+.modeSelectors {
+    border: 1px solid lightgrey;
+    padding: 2%;
+}
+
+.difficultySelectors{
+    display: block;
+}
+
+.newHighScore{
+    color: gold;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
